@@ -1,9 +1,9 @@
-FROM docker:17.12.0-ce as static-docker-source
+FROM docker:20.10 as static-docker-source
 
 # Use an official Python runtime as a parent image
-FROM circleci/node:10
+FROM circleci/node:16
 
-ARG CLOUD_SDK_VERSION=282.0.0
+ARG CLOUD_SDK_VERSION=361.0.0
 ENV CLOUD_SDK_VERSION=$CLOUD_SDK_VERSION
 ENV CLOUDSDK_PYTHON=python3
 
